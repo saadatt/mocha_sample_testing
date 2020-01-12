@@ -1,5 +1,5 @@
 ##                             Course Project 
-###          Unit testing under mocha framework and with chai assertion library
+###               Unit testing under mocha framework with a use of chai assertion library
 
 #### Introduction
  
@@ -21,7 +21,7 @@
    The project starts from writing my own test suites that is followed by actual test-running 
    by use of pre-installed Mocha and chai packages.
     
-##### Installation 
+##### Package Installation Guide
    - Install the node.js LTS version from Node website, npm gets installed along with node 
    automatically.
    - Check the successful installation of node and npm by running the following in the command line:
