@@ -28,9 +28,78 @@
    
     npm -v     // will return installed npm version
     node -v    // will return installed node version
+    
+    npm install --global mocha
+    npm install --save-dev mocha
+    
+Note: 
+ - global helps to install the Mocha on computer at global level which helps to run mocha test through
+  command line;
+ - save-dev helps to add the mocha as dependency in package.json file for that particular project.
 
+##### How the test actually works
+
+   The following two constant variables have to be declared:
+
+    const assert = require('assert');
+    const {expect} = require('chai');
+       
+   In order to test the function, it has to be called from the index.spec.js file after its name is 
+   exported from index.js and declared (i.e. imported to) the index.spec.file as it is shown below:
+    
+    const {sortArrayAscend, isOdd} = require('../index.js');
+    
+   ##### describe()
+   is a function which holds the collection of tests. It has the following generic construction:
+   describe( 'name of the test', () => {
+    it ( 'name of expected result', () => {
+    expect (function(input)).to.equal(output);
+    })
  
-##### Click below and open the sample functions (units) and tests for them:
+ The example below shows the describe function that uses expect().deep.equal() form:
+   
+    describe('sortArrayAscendTest', () => {
+    it('sortArrayAscend is expected to be equal [1, 2, 5, 6, 10, 160]', () => {
+    expect(sortArrayAscend([10, 5])).deep.equal([5, 10]);
+     });
+ The next example shows the same form but for the primitive type of data: 
+     
+    describe('letterRepeatTest', () => {
+    it('letterRepeat is expected to be equal to "aabbccdd"', () => {
+    expect(letterRepeat('abcd')).to.equal('aabbccdd');
+    });
+    
+   It takes two parameters, first one is the name to the tests' functionality and second one is 
+   the function that is called from the index.js folder and in turn, contains one or multiple tests. 
+   
+   #####  ... expect().to.equal()  
+   is a generic construction that essentially validates the output or task of the function.
+   
+   
+##### Functions (units) and tests for them that were implemented within this Project
+   
+   The following nine functions (units) were tested in this Project:
+   -  function that sorts out a given array in ascending order, sortArrayAscend();
+   
+   -  function that checks whether a word is a palindrome, isPalindrome();
+   
+   - Function that checks whether an integer is odd, isOdd();
+   
+   - Function that validates whether an integer is even, isEven();
+   
+  -  Function that validates whether a person is an adult, isAdult(num);
+
+   - Function that returns the credit card number masked with '#' symbol, protecting();
+   
+   - Function that checks whether the string ends with the given ending, isEnding();
+
+   - Function that returns the square root of an integer, squareRoot();
+
+   - Given a string, the Function letterRepeat() returns a string in which each character 
+     (case-sensitive) is repeated once;
+
+##### Attachment
 
 * [Functions](index.js)
+
 * [Tests](test/index.spec.js)
