@@ -22,6 +22,7 @@
    by use of pre-installed Mocha and chai packages.
     
 ##### Package Installation Guide
+
    - Install the node.js LTS version from Node website, npm gets installed along with node 
    automatically.
    - Check the successful installation of node and npm by running the following in the command line:
@@ -75,7 +76,7 @@ Note:
    #####  ... expect().to.equal()  
    is a generic construction that essentially validates the output or task of the function.
    
-   
+![](img/pic_mocha_proj.jpg)
 ##### Functions (units) and tests for them that were implemented within this Project
    
    The following nine functions (units) were tested in this Project:
