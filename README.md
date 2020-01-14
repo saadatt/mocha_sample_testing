@@ -3,7 +3,7 @@
 
 #### Introduction
  
-   The test-driven development (TDD) is one of the major ways to create a software application that is 
+   The test-driven development (TDD)  is one of the major ways to create a software application that is 
    less error-prone, more predictable and resilient to changes. 
    
    Just as with other programming languages, JavaScript has several tools and frameworks that 
